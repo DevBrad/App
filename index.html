@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Games App With Classes</title>
+  </head>
+
+  <body>
+    <form class="creationForm" action="" method="POST">
+      <label for="gameTitle">Title *</label>
+      <input type="text" value="" name="gameTitle" id="gameTitle" />
+
+      <label for="gameDescription">Description</label>
+      <textarea name=" gameDescription" id="gameDescription"></textarea>
+
+      <label for="gameGender">Gender *</label>
+      <select name="gameGender" id="gameGender">
+        <option value="">-</option>
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+      </select>
+
+      <label for="gamePublisher"> Publisher</label>
+      <input type="text" name="gamePublisher" id="gamePublisher" />
+
+      <label for="gameImageUrl" name="gameImageUrl">Image URL *</label>
+      <input type="text" name="gameImageUrl" id="gameImageUrl" />
+
+      <label for="gameRelease" name="gameRelease">Release *</label>
+      <input type="text" name="gameRelease" id="gameRelease" />
+
+      <button type="submit" class="submitBtn">Create Game</button>
+    </form>
+
+    <div class="container"></div>
+
+    <div class="container" style="visibility: hidden;" id="formContainer">
+      <form id="updateForm">
+        <label for="gameTitle">Title*</label>
+        <input type="text" value="" name="gameTitle" id="gamesTitle" />
+
+        <label for="gameDescription">Description</label>
+        <textarea name="gameDescription" id="gamesDescription"></textarea>
+
+        <label for="gameImageUrl">Image URL</label>
+        <input type="text" name="gameImageUrl" id="gamesImageUrl" />
+
+        <button class="update-btn" id="saveGameBtn">Save</button>
+        <button class="cancelBtn" id="cancelUpdate">Cancel</button>
+      </form>
+    </div>
+    <script src="fetch.js"></script>
+    <script src="games.js"></script>
+    <script src="view.js"></script>
+  </body>
+</html>
