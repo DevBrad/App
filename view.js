@@ -22,7 +22,7 @@ async function games() {
 }
 games();
 
-function validateFormElement(inputElement, errorMessage) {
+const validateFormElement = (inputElement, errorMessage) => {
   if (inputElement.value === "") {
     if (!document.querySelector('[rel="' + inputElement.id + '"]')) {
       buildErrorMessage(inputElement, errorMessage);
@@ -34,22 +34,22 @@ function validateFormElement(inputElement, errorMessage) {
       inputElement.classList.remove("inputError");
     }
   }
-}
+};
 
-function validateReleaseTimestampElement(inputElement, errorMessage) {
+const validateReleaseTimestampElement = (inputElement, errorMessage) => {
   if (isNaN(inputElement.value) && inputElement.value !== "") {
     buildErrorMessage(inputElement, errorMessage);
   }
-}
+};
 
-function buildErrorMessage(inputEl, errosMsg) {
+const buildErrorMessage = (inputEl, errosMsg) => {
   inputEl.classList.add("inputError");
   const errorMsgElement = document.createElement("span");
   errorMsgElement.setAttribute("rel", inputEl.id);
   errorMsgElement.classList.add("errorMsg");
   errorMsgElement.innerHTML = errosMsg;
   inputEl.after(errorMsgElement);
-}
+};
 
 document
   .querySelector(".submitBtn")
